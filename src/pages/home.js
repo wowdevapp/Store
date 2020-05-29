@@ -1,18 +1,14 @@
-import React from 'react'
-import { ProductConsumer } from "../context/context";
-
-
-export default function home() {
+import React from 'react';
+import {Link}  from  'react-router-dom';
+import  Hero  from "../components/hero";
+export default function home(){
     return (
         <>
-        <ProductConsumer>
-          {value => {
-            console.log(value);
-            return <h1>Hello from HomePage</h1>;
-          }}
-        </ProductConsumer>
-      </>
-    )
+          <Hero title="awesome gadgets" max="true">
+            <Link to="/products">products hero</Link>
+         </Hero>
+        </>
+    );
 }
 
 
