@@ -5,7 +5,7 @@ export default function home(){
     return (
         <>
           <Hero title="awesome gadgets" max="true">
-            <Link to="/products">products hero</Link>
+            <Link to="/products">Our Products</Link>
          </Hero>
         </>
     );
