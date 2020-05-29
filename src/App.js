@@ -11,10 +11,10 @@ import {
   Route,
 } from "react-router-dom";
 
-import Navbar from "./components/Navbar";
-import Sidebar from "./components/Sidebar";
+import Navbar   from "./components/Navbar";
+import Sidebar  from "./components/Sidebar";
 import Sidecart from "./components/SideCart";
-import Footer from "./components/Footer";
+import Footer   from "./components/Footer";
 class App extends Component {
   render() {
     return (

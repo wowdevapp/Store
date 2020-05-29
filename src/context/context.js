@@ -5,7 +5,7 @@ const ProductContext = React.createContext();
 //Consumer
 class ProductProvider extends Component {
   state = {
-    sidebarOpen: false,
+    sidebarOpen:false,
     cartOpen: false,
     cartItems: 0,
     links:linkData,
@@ -16,7 +16,7 @@ class ProductProvider extends Component {
   };
   // hanldle sart
   handleCart = () => {
-    this.setState({ cartOpen: !this.state.sidebarOpen });
+    this.setState({ cartOpen: !this.state.cartOpen});
   };
   //close cart
   closeCart = () => {
