@@ -1,21 +1,19 @@
 import React, { Component } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
-import './App.css';
+import "./App.css";
 
 import home from "./pages/home";
 import about from "./pages/about";
 import contact from "./pages/contact";
 import cart from "./pages/cart";
-import Default   from "./pages/default";
-import {
-  Switch,
-  Route,
-} from "react-router-dom";
+import ProductsPage from "./pages/productPage";
+import Default from "./pages/default";
+import { Switch, Route } from "react-router-dom";
 
-import Navbar   from "./components/Navbar";
-import Sidebar  from "./components/Sidebar";
+import Navbar from "./components/Navbar";
+import Sidebar from "./components/Sidebar";
 import Sidecart from "./components/SideCart";
-import Footer   from "./components/Footer";
+import Footer from "./components/Footer";
 class App extends Component {
   render() {
     return (
@@ -28,6 +26,7 @@ class App extends Component {
           <Route path="/" exact component={home} />
           <Route path="/about" component={about} />
           <Route path="/contact" component={contact} />
+          <Route path="/products" component={ProductsPage} />
           <Route path="/cart" component={cart} />
           <Route component={Default} />
         </Switch>
@@ -38,4 +37,3 @@ class App extends Component {
 }
 
 export default App;
-

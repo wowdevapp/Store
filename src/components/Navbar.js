@@ -6,13 +6,15 @@ import logo from "../images/logo.svg";
 export default function Navbar() {
   return (
     <ProductConsumer>
-      {value => {
+      {(value) => {
         const { cartItems, handleSidebar, handleCart } = value;
         return (
           <NavWrapper>
             <div className="nav-center">
               <FaBars className="nav-icon" onClick={handleSidebar} />
-              <h4 className="logo">Store<span>Ino</span></h4>
+              <h4 className="logo">
+                Store<span>Ino</span>
+              </h4>
               <div className="nav-cart">
                 <FaCartPlus className="nav-icon" onClick={handleCart} />
                 <div className="cart-items">{cartItems}</div>
@@ -33,7 +35,8 @@ const NavWrapper = styled.nav`
   padding: 1rem 1.5rem;
   background: var(--mainGrey);
   border-bottom: 1px solid var(--primaryColor);
-  max-height:60px;
+  max-height: 60px;
+  z-index: 1000;
   .nav-center {
     display: flex;
     align-items: center;
@@ -58,12 +61,12 @@ const NavWrapper = styled.nav`
     padding: 0 5px;
     border-radius: 50%;
   }
-  .logo{
-      text-align: center;
-      color:var(--primaryColor);
-      font-weight:bold;
-      span{
-          color:blue;
-      }
+  .logo {
+    text-align: center;
+    color: var(--primaryColor);
+    font-weight: bold;
+    span {
+      color: blue;
+    }
   }
 `;
