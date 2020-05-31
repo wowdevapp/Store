@@ -1,34 +1,34 @@
-import React from 'react';
+import React from "react";
 import styled from "styled-components";
 import { ProductConsumer } from "../context/context";
 import { Link } from "react-router-dom";
 export default function SideCart() {
-    return (
+  return (
     <ProductConsumer>
-        {value => {
-          const { links,cartOpen, handleCart,closeCart } = value;
-          return (
-            <SideCartWrapper show={cartOpen} onClick={closeCart}>
-              <ul>
-                {links.map(link => {
-                  return (
-                    <li key={link.id}>
-                      <Link
-                        to={link.path}
-                        className="sidebar-link"
-                        onClick={handleCart}
-                      >
-                        {link.text}
-                      </Link>
-                    </li>
-                  );
-                })}
-              </ul>
-            </SideCartWrapper>
-          );
-        }}
-      </ProductConsumer>
-    );
+      {(value) => {
+        const { links, cartOpen, handleCart, closeCart } = value;
+        return (
+          <SideCartWrapper show={cartOpen} onClick={closeCart}>
+            <ul>
+              {links.map((link) => {
+                return (
+                  <li key={link.id}>
+                    <Link
+                      to={link.path}
+                      className="sidebar-link"
+                      onClick={handleCart}
+                    >
+                      {link.text}
+                    </Link>
+                  </li>
+                );
+              })}
+            </ul>
+          </SideCartWrapper>
+        );
+      }}
+    </ProductConsumer>
+  );
 }
 const SideCartWrapper = styled.div`
   position: fixed;
@@ -40,7 +40,7 @@ const SideCartWrapper = styled.div`
   z-index: 1;
   border-left: 1px solid var(--primaryColor);
   transition: var(--mainTransition);
-  transform: ${props => (props.show ? "translateX(0)" : "translateX(100%)")};
+  transform: ${(props) => (props.show ? "translateX(0)" : "translateX(100%)")};
   ul {
     list-style-type: none;
     padding: 0 !important;
@@ -64,4 +64,3 @@ const SideCartWrapper = styled.div`
     width: 20rem;
   }
 `;
-
