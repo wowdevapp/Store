@@ -5,7 +5,7 @@ import "./App.css";
 import home from "./pages/home";
 import about from "./pages/about";
 import contact from "./pages/contact";
-import cart from "./pages/cart";
+import Cart from "./pages/cart";
 import ProductsPage from "./pages/productPage";
 import Default from "./pages/default";
 import SingleProduct from "./pages/SingleProductPage";
@@ -28,7 +28,7 @@ class App extends Component {
           <Route path="/contact" component={contact} />
           <Route path="/products" exact component={ProductsPage} />
           <Route path="/products/:id" component={SingleProduct} />
-          <Route path="/cart" component={cart} />
+          <Route path="/cart" component={Cart} />
           <Route component={Default} />
         </Switch>
         <Footer></Footer>
